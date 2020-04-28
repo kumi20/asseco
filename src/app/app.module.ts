@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppServicesService } from './app-services.service';
 import { ProductComponent } from './product-list/product/product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { PageNotFaoundComponent } from './page-not-faound/page-not-faound.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     FooterComponent,
     ProductListComponent,
     ProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    PageNotFaoundComponent
   ],
   imports: [
     BrowserModule,
