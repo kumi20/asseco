@@ -1,0 +1,91 @@
+.productContent {
+  padding-top: 10px;
+  cursor: pointer;
+  border-bottom: 1px dotted #111111;
+}
+
+.logo-product {
+  width: 70px;
+  margin-top: -20px;
+}
+
+.tilesView {
+  // box-shadow: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.rozwiazania-loga {
+  cursor: pointer;
+  padding: 10px 0px 70px;
+}
+
+.rozwiazania-loga > div a {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px 0px;
+  height: 220px;
+  transition: 0.2s all ease-in-out;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: #fafafa;
+  margin-bottom: -50px;
+}
+
+.rozwiazania-loga > div a p {
+  position: absolute;
+  top: 120px;
+  color: #333;
+  padding: 0px 20px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.rozwiazania-loga > div a:hover p {
+  top: 80px;
+}
+
+.rozwiazania-loga > div a p {
+  top: 90px;
+}
+
+.rozwiazania-loga > div a h1 {
+  top: 100px;
+  padding-left: 20px;
+  margin-top: -80px;
+}
+
+.rozwiazania-loga > div a:hover h1 {
+  top: 80px;
+  margin-top: -115px;
+  padding-left: 20px;
+}
+
+.rozwiazania-loga a > span {
+  position: absolute;
+  bottom: -100px;
+  left: 20px;
+  width: auto;
+  transition: 0.2s all ease-in-out;
+}
+.rozwiazania-loga a:hover > span {
+  bottom: 20px;
+}
+
+.btn-primary {
+  color: #333 !important;
+  background: transparent !important;
+  font-family: 'proxima_nova_rgregular';
+  border: 0px;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  border-radius: 0px;
+  padding: 10px 4px 10px;
+  outline: 0;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}

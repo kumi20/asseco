@@ -1,0 +1,21 @@
+<div class="productContent" *ngIf="view == 'listView'; else tilesView">
+  <h1>{{ product.productName }}</h1>
+  <img
+    src="./assets/img/logo-product.svg"
+    alt="Asseco Business Solutions"
+    class="logo-product"
+  />
+  <p>{{ product.description }}</p>
+</div>
+
+<ng-template #tilesView>
+  <div class="rozwiazania-loga">
+    <div>
+      <a>
+        <h1>{{ product.productName }}</h1>
+        <p>{{ product.description | slice: 0:100 }}</p>
+        <span class="btn btn-primary da-link">Czytaj więcej</span>
+      </a>
+    </div>
+  </div>
+</ng-template>
