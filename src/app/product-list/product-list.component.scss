@@ -9,6 +9,7 @@
 
 /* Create a custom checkbox */
 .checkmark {
+    color: #ffffff;
     display: inline-block;
     margin-bottom: 0;
     font-weight: 400;
@@ -32,4 +33,5 @@
 
 .views input:checked ~ .checkmark {
   background-color: #ffffff;
+  color:#111111;
 }

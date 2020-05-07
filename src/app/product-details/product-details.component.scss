@@ -1,3 +1,12 @@
+.list-group{
+    padding: 10px;
+    border: 1px solid #f5efef;
+    border-radius: 5px;
+    box-shadow: 2px 3px 0px #e4d8d8;
+    overflow:hidden;
+    background-color: #ffffff;
+}
+
 .list{
     padding-left: 20px;
     margin-bottom: 5px;
@@ -13,4 +22,16 @@
 .wariant-table{
     display: none;
     transition: 0.2s all ease-in-out;
+}
+
+.dx-accordion-item-title{
+    font-size:  12px !important;
+}
+
+.dx-accordion-item-bod{
+    font-size:  12px !important;
+}
+
+h3{
+    font-size: 1.2rem;
 }

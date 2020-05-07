@@ -1,4 +1,4 @@
-<article>
+<article class="list-group">
   <header>
     <h1>{{ productDetalis.productName }}</h1>
   </header>
@@ -25,31 +25,49 @@
       </table>
     </div>
 
-    <div class="table-responsive-sm" id="wariant-table">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Warianty</th>
-          </tr>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nazwa</th>
-            <th scope="col">Maksmalna liczba użytkowników</th>
-            <th scope="col">Zarejestrowane www</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let variant of productDetalis.variants; let i = index;">
-            <td>{{ i + 1 }}</td>
-            <td>{{ variant.variantName }}</td>
-            <td>{{ variant.maxNumberOfUsers }}</td>
-            <td>{{ variant.orderWWW }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Dostępne warianty:</h3>
+        <dx-accordion
+          [dataSource]="productDetalis.variants"
+          [collapsible]="false"
+          [multiple]="false"
+          [animationDuration]="300"
+        >
+          <div *dxTemplate="let company of 'title'">
+            <p>{{ company.variantName }}</p>
+          </div>
+
+          <div *dxTemplate="let company of 'item'">
+            <p><strong>Maksmalna liczba użytkowników:</strong> {{ company.maxNumberOfUsers }}</p>
+            <p><strong>Zarejestrowane www:</strong> {{ company.orderWWW }}</p>
+          </div>
+        </dx-accordion>
+      </div>
     </div>
 
-    <div class="table-responsive-sm" id="wariant-table">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Historia wersji:</h3>
+        <dx-accordion
+          [dataSource]="productDetalis.versions"
+          [collapsible]="false"
+          [multiple]="false"
+          [animationDuration]="300"
+        >
+          <div *dxTemplate="let company of 'title'">
+            <p>{{ company.versionNumber }}</p>
+          </div>
+
+          <div *dxTemplate="let company of 'item'">
+            <p><strong>Numer wersji:</strong> {{ company.versionNumber }}</p>
+            <p><strong>Data wydania:</strong> {{ company.releaseDate | date: "yyyy-MM-dd" }}</p>
+          </div>
+        </dx-accordion>
+      </div>
+    </div>
+
+    <!-- <div class="table-responsive-sm" id="wariant-table">
       <table class="table">
         <thead>
           <tr>
@@ -62,13 +80,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let version of productDetalis.versions; let i = index;">
+          <tr *ngFor="let version of productDetalis.versions; let i = index">
             <td>{{ i + 1 }}</td>
             <td>{{ version.versionNumber }}</td>
             <td>{{ version.releaseDate | date: "yyyy-MM-dd" }}</td>
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
   </div>
 </article>
