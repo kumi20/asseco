@@ -52,6 +52,9 @@
       <a>
         <h1>{{ product.productName }}</h1>
         <p>{{ product.description | slice: 0:100 }}</p>
+        <h6 class="font-weight-bold" style="margin-left:20px;">
+          {{ product.basePrice | currency: "PLN ":"symbol":"1.0-0" }}
+        </h6>
         <span class="btn btn-primary da-link">Czytaj więcej</span>
       </a>
     </div>
