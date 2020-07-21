@@ -1,23 +1,52 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">
-      <img
-        src="./assets/img/logo.png"
-        class="img-fluid"
-        alt="Asseco Buisnes Solution"
-        [routerLink]=""
-      />
+      <img src="./assets/img/logo.jpg" class="img-fluid" alt="Asseco Buisnes Solution"
+        [routerLink]="[{outlets:{'content-outlet': ['offer']}}]" />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/bob" routerLinkActive="active">MOI KLIENCI</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/bob" routerLinkActive="active">ZAMÓWIENIA</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="[{outlets:{'content-outlet': ['offer']}}]"
+            routerLinkActive="active">OFERTA</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/bob" routerLinkActive="active">MOJE PRODUKTY</a>
+        </li>
+
+
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <div class="nav-link" routerLink="/user/bob" routerLinkActive="active">
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+              <div class="circle">{{shopingCount}}</div>
+            </div>
+
+          </li>
+
+          <li class="nav-item">
+            <button class="btn btn-log-out" title="Wyloguj" (click)="logout()">
+              <i aria-hidden="true" class="fa fa-sign-out"></i>
+              Wyloguj</button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>

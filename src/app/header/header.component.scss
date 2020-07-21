@@ -1,3 +1,45 @@
 header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  li {
+    a {
+      &:hover {
+        border-bottom: 2px solid #b62428;
+      }
+    }
+  }
+}
+.active {
+  border-bottom: 2px solid #b62428;
+}
+
+.btn-log-out {
+  background-color: #d42027;
+  color: #ffffff;
+  &:hover {
+    background-color: #031f2c;
+  }
+}
+
+.fa-shopping-basket {
+  font-size: 21px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: #d42027;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  left: 15px;
+  top: -15px;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
 }
